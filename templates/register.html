@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+{% set active_page = "register" %}
+
+
+{% block heading %}
+  Register
+{% endblock %}
+
+{% block body %}
+  <section class="regist">
+
+    <div class="container wrapper">
+      <div class="card card-3">
+        <div class="card-heading"></div>
+        <div class="card-body">
+          <h3 class="display-5">Sign Up</h3>
+            {% from "includes/_formhelpers.html" import render_field %}
+            <form class="form_style" method="POST">
+              <section id="form-1">
+
+                <div class="input-group">
+                  {{render_field(form.name, class_="form-control input-style", placeholder=form.name.label.text)}}
+                    <!-- <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                    {{render_field(form.username, class_="form-control input-style", placeholder=form.username.label.text)}}
+                    <!-- <label for="name">Username</label>
+                    <input type="text" name="username" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                  {{render_field(form.pwd, class_="form-control input-style", placeholder=form.pwd.label.text)}}
+                    <!-- <label for="name">Passwword</label>
+                    <input type="password" name="pwd" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                  {{render_field(form.confirm, class_="form-control input-style", placeholder=form.confirm.label.text)}}
+                    <!-- <label for="name">Confirm Password</label>
+                    <input type="password" name="confirm" class="form-control" value=""> -->
+                </div>
+
+              </section>
+
+              <button type="button" class="btn btn-rounded btn-style" id="next" onclick="myFunc()">Next</button>
+
+              <section id="form-2" class="disp-none">
+
+                <div class="input-group">
+                  <label>Gender</label>
+                  {{render_field(form.gender, class_="form-control input-style")}}
+                    <!-- <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                  {{render_field(form.country, class_="form-control input-style", placeholder=form.country.label.text)}}
+                    <!-- <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                  {{render_field(form.state, class_="form-control input-style", placeholder=form.state.label.text)}}
+                    <!-- <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                  {{render_field(form.city, class_="form-control input-style", placeholder=form.city.label.text)}}
+                    <!-- <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group">
+                  {{render_field(form.profession, class_="form-control input-style", placeholder=form.profession.label.text)}}
+                    <!-- <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" value=""> -->
+                </div>
+
+                <div class="input-group checks">
+                  <label>Favourite Genres</label>
+                  <div class="form-check table-responsive">
+                    {{render_field(form.genres, class_="form-check-input list-unstyled input-style")}}
+                      <!-- <label for="name">Name</label>
+                      <input type="text" name="name" class="form-control" value=""> -->
+                  </div>
+                </div>
+
+                <p class="pt-1"><input type="submit" class="btn btn-rounded btn-style" value="Submit"></p>
+              </section>
+
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

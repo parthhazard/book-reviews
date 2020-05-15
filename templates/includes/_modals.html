@@ -1,0 +1,101 @@
+<div class="container wrapper">
+  {% if active_page == 'books' %}
+    <div class="modal fade" id="modalAddReview" tabindex="-1" role="dialog" aria-labelledby="modalData" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalData">Write a review for {{book.title}}</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form class="form_style" action="{{url_for('addReview')}}" method="POST">
+
+              <div class="form-group disp-none">
+                <label for="isbn" class="col-form-loabel">ISBN</label>
+                <input type="text" name="isbn" id="isbn" value="{{book.isbn}}">
+              </div>
+
+              <div class="form-group">
+                <label for="rating" class="col-form-loabel">Rating</label>
+                <input type="number" step="0.01" min="0" max="5" name="rating" id="rating"><span class="pl-1">/5</span>
+              </div>
+
+              <div class="form-group">
+                <label for="reviewText">Review</label>
+                <textarea name="reviewText" rows="8" cols="80" id="reviewText"></textarea>
+                <span class="text-muted">Max 500 charecters.</span>
+              </div>
+
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-rounded btn-style" data-toggle="modal" data-target="#sure">Submit Review</button>
+              </div>
+
+              <div class="overlay">
+
+              </div>
+
+              <div class="modal fade modal1" tabindex="-2" role="dialog" id="sure">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                    </div>
+                    <div class="modal-body">
+                      <p>Are you sure?</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-rounded btn-style" data-dismiss="modal" aria-label="Close">No</button>
+                      <button type="submit" class="btn btn-rounded btn-style">Yes, post review</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="modal fade" id="modalDeleteAll" tabindex="-1" role="dialog" aria-labelledby="modalData" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+
+          </div>
+          <div class="modal-body">
+            <form class="form_style" action="{{url_for('deleteAll')}}" method="POST">
+              <p>Are you sure?</p>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-rounded btn-style" data-dismiss="modal" aria-label="Close">No</button>
+                <button type="submit" class="btn btn-rounded btn-style">Yes, delete all</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalArchiveAll" tabindex="-1" role="dialog" aria-labelledby="modalData" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+
+          </div>
+          <div class="modal-body">
+            <form class="form_style" action="{{url_for('archiveAll')}}" method="POST">
+              <p>Are you sure?</p>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-rounded btn-style" data-dismiss="modal" aria-label="Close">No</button>
+                <button type="submit" class="btn btn-rounded btn-style">Yes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+</div>

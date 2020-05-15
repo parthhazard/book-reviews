@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+{% set active_page = 'books' %}
+
+{% block heading %}
+  {{book.title}}
+{% endblock %}
+
+{% block body %}
+  <section class="books-page">
+    <section id="add-review">
+      {% include 'includes/_modals.html' %}
+    </section>
+
+    <section class="book mx-auto">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-md-5 col-xl-5 my-auto col-book">
+            <div class="card mb-1 card-book">
+
+              <div class="card-body card-body-about">
+                <h5 class="card-title"><span class="text-muted ml-1">Title:</span><span class="ml-2">{{book.title}}</span></h5>
+                <hr>
+
+                <img src="{{ url_for('static',filename='css/images/goodreads.png') }}" alt="" width="36px" class="img-fluid float-right">
+                <br>
+                <br>
+                {% if res %}
+                  <h5 class="card-text float-right">{{res.average_rating}}<span>/5</span></h5>
+                {% else %}
+                  <h5 class="card-text float-right"><i class="fa fa-minus pr-3"></i></h5>
+                {% endif %}
+                <div class="container book-info">
+                  <h6 class="card-text"><span class="text-muted pb-1">Author:</span><span class="ml-2">{{book.name}}</span></h6>
+                  <h6 class="card-text"><span class="text-muted pb-1">ISBN:</span><span class="ml-2">{{book.isbn}}</span></h6>
+                  <h6 class="card-text"><span class="text-muted pb-1">Published Year:</span><span class="ml-2">{{book.publication_year}}</span></h6>
+                  <h6 class="card-text"><span class="text-muted pb-1">Review Count:</span><span class="ml-2">{{res.work_ratings_count}}</span></h6>
+                </div>
+
+                <hr>
+
+                <div class="container-fluid">
+                  {% if (session.logged_in) and (ifUserReview == True) %}
+                    <!-- <button type="button" name="button" class="btn btn-style" data-toggle="modal" data-target="#modalUpdateReview"><span>Update Review</span></button> -->
+                    <button type="button" name="button" class="btn btn-style"><span>Alredy reviewed the book</span></button>
+                  {% elif session.logged_in %}
+                    <button type="button" name="button" class="btn btn-style" data-toggle="modal" data-target="#modalAddReview"><span>Add a Review</span></button>
+                  {% else %}
+                    <a href="{{url_for('login')}}">
+                      <button type="button" name="button" class="btn btn-style"><span>Login to Add a Review</span></button>
+                    </a>
+                  {% endif %}
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-7 col-xl-7">
+            <div class="card mn-5 card-reviews">
+              <div class="card-header">
+                <h5 class="card-title mb-n1 pl-3 fixed">Reviews</h5>
+              </div>
+
+              <div class="card-body">
+                {% if reviews %}
+                  {% for x in reviews %}
+
+                    <div class="media">
+                      <img src="{{ url_for('static',filename='css/images/profile.jpg') }}" alt="" width="28px" height="28px" class="rounded-circle mr-3">
+                      <div class="media-body">
+                        <strong>{{x.username}}</strong>
+
+                        <div class="media-body">
+                          <div class="border text-sm text-muted p-2 mt-1">
+                            <section id="rating">
+                              <span class="rating"><i class="fa fa-star mr-1"></i>{{x.ratings}}<span class="pl-1">/5</span></span>
+                              <hr>
+                            </section>
+                            {% if x.review_text|length > 100 %}
+                              <section id="review">
+                                <span class="review">{{x.review_text[:100]}}<span id="dots">...</span><span id="more">{{x.review_text[100:]}}</span></span>
+                                <button onclick="readMoreLess(this.parentElement)" id="btn-more">Read More</button>
+                              </section>
+                            {% else %}
+                              <section id="review">
+                                <span class="review">{{x.review_text}}</span>
+                              </section>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr>
+                  {% endfor %}
+                {% else %}
+                  <div class="media">
+                    <div class="media-body">
+                      <p class="mx-auto">No reviews posted yet.</p>
+                    </div>
+                  </div>
+                {% endif %}
+
+                </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </section>
+{% endblock %}

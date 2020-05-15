@@ -1,0 +1,642 @@
+section.profile, section.login .wrapper .card-3 .card-body form .input-group .input-style, section.regist .wrapper .card-3 .card-body form .input-group .input-style, nav li.nav-item a {
+  font-family: "Poppins", sans-serif;
+}
+
+section.login, section.regist {
+  padding-bottom: 100px;
+}
+
+section.regist {
+  padding-top: 100px;
+}
+
+.disp-none {
+  display: none;
+}
+
+.mt-n65 {
+  margin-top: -65px;
+}
+
+section.profile, section.login .wrapper .card-3 .card-body form .input-group .input-style, section.regist .wrapper .card-3 .card-body form .input-group .input-style, nav li.nav-item a {
+  color: #AD614A;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.box .search input:focus {
+  outline: none;
+}
+
+body {
+  background: #EFEAE4;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 85px;
+  }
+}
+
+.px-10 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+nav {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 1px 0.5px #C4B2A4;
+}
+nav button span.fa-bars {
+  color: #AD614A;
+  font-size: 24px;
+}
+nav li.nav-item > a:not([href]), nav li.nav-item > a:not([href]):focus, nav li.nav-item > a:not([href]):hover {
+  color: #AD614A;
+  cursor: pointer;
+}
+@media (min-width: 1460px) {
+  nav {
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1460px) {
+  nav {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  nav {
+    padding-left: 70px !important;
+    padding-right: 70px !important;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+.box {
+  padding: 7px 15px;
+  background-color: #FFFFFF;
+  border: 2px solid #C4B2A4;
+  border-radius: 20px;
+  height: 50px;
+  padding: 10px;
+}
+.box span.fa-search {
+  position: absolute;
+  font-size: 26px;
+  color: #AD614A;
+  margin-right: 10px;
+}
+.box .search input {
+  border: none;
+  border-width: 0px;
+  margin-left: 30px;
+  width: 90%;
+  color: #3A342F;
+}
+@media (min-width: 1460px) {
+  .box {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1460px) {
+  .box {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .box {
+    width: 80%;
+  }
+}
+@media (max-width: 768px) {
+  .box {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1460px) {
+  section.regist {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section.regist {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  section.regist {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+section.regist .wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
+section.regist .wrapper .card-3 {
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: 100%;
+  display: table;
+  box-shadow: 0 8px 20px 0 rgba(58, 52, 46, 0.1);
+}
+section.regist .wrapper .card-3 .card-heading {
+  background: url("images/bookshelf.jpg") top left/cover no-repeat;
+  display: table-cell;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  section.regist .wrapper .card-3 .card-heading {
+    display: block;
+    width: 100%;
+    background-position: center center;
+    padding: 100px;
+  }
+}
+section.regist .wrapper .card-3 .card-body {
+  padding: 50px 40px;
+  padding-bottom: 65px;
+  display: table-cell;
+}
+@media (max-width: 768px) {
+  section.regist .wrapper .card-3 .card-body {
+    display: block;
+    width: 100%;
+    padding: 37px 30px;
+    padding-bottom: 45px;
+  }
+}
+section.regist .wrapper .card-3 .card-body h3 {
+  margin-bottom: 37px;
+  font-size: 20px;
+}
+section.regist .wrapper .card-3 .card-body form {
+  margin: 0;
+  padding: 0;
+}
+section.regist .wrapper .card-3 .card-body form dd {
+  width: 100%;
+}
+section.regist .wrapper .card-3 .card-body form .input-group {
+  position: relative;
+  margin-bottom: 26px;
+}
+section.regist .wrapper .card-3 .card-body form .input-group input, section.regist .wrapper .card-3 .card-body form .input-group select, section.regist .wrapper .card-3 .card-body form .input-group ul {
+  outline: none;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  font-family: inherit;
+  border-bottom: 1px solid #C4B2A4;
+}
+section.regist .wrapper .card-3 .card-body form .input-group ul li input {
+  width: auto;
+}
+section.regist .wrapper .card-3 .card-body form .input-group .input-style {
+  padding: 5px 0;
+  font-weight: 400;
+  background: 0 0;
+}
+section.regist .wrapper .card-3 .card-body form .input-group label {
+  color: #3A342F;
+  font-size: 18px;
+}
+section.regist .wrapper .card-3 .card-body form .checks {
+  height: 100px;
+}
+section.regist .wrapper .card-3 .card-body form .checks label {
+  margin-bottom: 0px;
+}
+section.regist .wrapper .card-3 .card-body form .checks #genres {
+  height: 90px;
+}
+section.regist .wrapper .card-3 .card-body form .checks div.form-check {
+  margin-top: -40px;
+}
+@media (max-width: 768px) {
+  section.regist .wrapper .card-3 {
+    display: block;
+    margin: 20px 0;
+  }
+}
+
+.btn-style {
+  background-color: #AD614A;
+  outline: 2px #C4B2A4;
+  color: #FFFFFF;
+  border-radius: 10px;
+}
+
+.errors .error-disp {
+  color: #3A342F;
+}
+
+section.login {
+  padding-top: 60px;
+}
+@media (max-width: 768px) {
+  section.login {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+section.login .wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
+section.login .wrapper .card-3 {
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: 100%;
+  display: table;
+  box-shadow: 0 8px 20px 0 rgba(58, 52, 46, 0.1);
+}
+section.login .wrapper .card-3 .card-heading {
+  background: url("images/hand_bookshelf.jpg") top left/cover no-repeat;
+  display: table-cell;
+  width: 50%;
+}
+@media (max-width: 768px) {
+  section.login .wrapper .card-3 .card-heading {
+    display: block;
+    width: 100%;
+    background-position: center center;
+    padding: 100px;
+  }
+}
+section.login .wrapper .card-3 .card-body {
+  padding: 57px 65px;
+  padding-bottom: 65px;
+  display: table-cell;
+}
+@media (max-width: 768px) {
+  section.login .wrapper .card-3 .card-body {
+    display: block;
+    width: 100%;
+    padding: 37px 30px;
+    padding-bottom: 45px;
+  }
+}
+section.login .wrapper .card-3 .card-body h3 {
+  margin-bottom: 37px;
+  font-size: 20px;
+}
+section.login .wrapper .card-3 .card-body form {
+  margin: 0;
+  padding: 0;
+}
+section.login .wrapper .card-3 .card-body form dd {
+  width: 100%;
+}
+section.login .wrapper .card-3 .card-body form .input-group {
+  position: relative;
+  margin-bottom: 46px;
+}
+section.login .wrapper .card-3 .card-body form .input-group input {
+  outline: none;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  font-family: inherit;
+  border-bottom: 2px solid #C4B2A4;
+}
+section.login .wrapper .card-3 .card-body form .input-group .input-style {
+  padding: 10px 0;
+  font-weight: 400;
+  background: 0 0;
+}
+@media (max-width: 768px) {
+  section.login .wrapper .card-3 {
+    display: block;
+    margin: 20px 0;
+  }
+}
+
+section.profile {
+  font-weight: 400;
+}
+@media (min-width: 1460px) {
+  section.profile {
+    padding: 50px 150px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1460px) {
+  section.profile {
+    padding: 50px 110px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  section.profile {
+    padding: 40px 50px;
+  }
+}
+@media (max-width: 768px) {
+  section.profile {
+    padding: 0px;
+  }
+}
+section.profile .card .card-header {
+  outline: none;
+  background: transparent;
+}
+section.profile .card .card-header .dropdown {
+  margin-top: -10px;
+}
+section.profile .card .card-header .dropdown #dropMenu2 {
+  border: none;
+  background: transparent;
+}
+section.profile .card .card-header .dropdown #dropMenu2 span {
+  margin-top: 5px;
+}
+section.profile .card .card-header .dropdown .dropdown-toggle::before {
+  display: none;
+}
+section.profile .card .card-body .text-muted {
+  color: #3A342F !important;
+}
+section.profile .card .card-body div.text-muted {
+  font-size: 1rem;
+}
+section.profile .card .card-body .badge-bg {
+  background-color: #EFEAE4;
+  color: #3A342F;
+  font-size: 85%;
+}
+section.profile .card .card-body .btn-style {
+  background: #AD614A;
+  outline: #C4B2A4;
+  width: 80%;
+  align-items: center;
+}
+section.profile .card .card-body .media .media-body a strong {
+  color: #AD614A;
+}
+section.profile .card .card-body .media .media-body a:hover {
+  color: #3A342F;
+  text-decoration: underline;
+}
+section.profile .card .card-body .media .media-body small {
+  color: #3A342F;
+}
+section.profile .card .card-body .media .media-body .dropdown #dropMenu3 {
+  border: none;
+  background: transparent;
+}
+section.profile .card .card-body .media .media-body .dropdown .dropdown-toggle::before {
+  display: none;
+}
+section.profile .card .card-body .media .media-body .border {
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+section.profile .card .card-body .media .media-body section#review .review #more {
+  display: none;
+}
+section.profile .card .card-body .media .media-body section#review .review #btn-more {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #AD614A;
+}
+section.profile .card .card-body .media .media-body section#review .review #btn-more:focus {
+  outline: none;
+}
+
+div.alert {
+  padding: 3px 20px;
+  height: 40px;
+  background-color: #AD614A;
+  color: #FFFFFF;
+  width: fit-content;
+}
+div.alert button {
+  color: #FFFFFF;
+  font-size: 20px;
+  background-color: transparent;
+  padding-top: 0px;
+}
+div.alert button:hover {
+  color: #3A342F;
+  font-size: 22px;
+}
+
+section.books-display {
+  max-width: 992px;
+}
+section.books-display .card {
+  height: fit-content;
+}
+section.books-display .book-9 {
+  display: none;
+}
+section.books-display .book-9 img {
+  width: 100%;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section.books-display .book-9 {
+    display: block;
+  }
+}
+@media (min-width: 540px) and (max-width: 768px) {
+  section.books-display {
+    max-width: 768px;
+  }
+  section.books-display .book-9 {
+    display: none;
+  }
+}
+@media (min-width: 480px) and (max-width: 576px) {
+  section.books-display div.container {
+    padding-left: 105px;
+    padding-right: 105pdx;
+  }
+  section.books-display .book-9 {
+    display: block;
+  }
+}
+@media (min-width: 360px) and (max-width: 480px) {
+  section.books-display div.container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  section.books-display .book-9 {
+    display: block;
+  }
+}
+@media (max-width: 360px) {
+  section.books-display .book-9 {
+    display: block;
+  }
+}
+section.books-display .card {
+  box-shadow: 0 8px 20px 0 rgba(58, 52, 46, 0.1);
+}
+section.books-display .card .card-img-overlay {
+  display: none;
+}
+section.books-display .card:hover {
+  cursor: pointer;
+}
+
+section.searchSection {
+  z-index: 1030;
+  left: 0;
+  right: 0;
+}
+
+section.books-page {
+  font-size: 16px;
+}
+section.books-page section.book {
+  color: #AD614A;
+  max-width: 992px;
+  width: 100%;
+  padding-top: 40px;
+}
+@media (max-width: 768px) {
+  section.books-page section.book .row {
+    margin: inherit 50px;
+  }
+  section.books-page section.book .card-reviews {
+    margin-top: 10px;
+  }
+}
+section.books-page section.book .card {
+  border-radius: 1px;
+}
+section.books-page section.book .col-book {
+  display: table-column;
+}
+section.books-page section.book .col-book .card-book {
+  background: url(images/blackback.jpg);
+}
+section.books-page section.book .col-book .card-body-about {
+  background: rgba(10, 10, 10, 0.5);
+}
+section.books-page section.book .col-book .card-body-about hr {
+  border-top: 1px solid rgba(165, 94, 72, 0.4);
+}
+section.books-page section.book .col-book .card-body-about div.container {
+  margin-top: -50px;
+}
+section.books-page section.book .col-book .card-body-about div.container-fluid button {
+  font-size: 15px;
+}
+@media (max-width: 768px) {
+  section.books-page section.book .col-book .card-body-about div.book-info {
+    margin-left: 0px;
+  }
+}
+section.books-page section.book .card-book, section.books-page section.book .card-reviews {
+  box-shadow: -5px 5px rgba(173, 97, 74, 0.01);
+}
+section.books-page section.book .card-reviews {
+  height: 55vh;
+  overflow: auto;
+  margin-left: -30px;
+}
+@media (max-width: 768px) {
+  section.books-page section.book .card-reviews {
+    margin-left: 0px;
+  }
+}
+section.books-page section.book .card-reviews .card-header {
+  padding: 5px 10px 0px 5px;
+}
+section.books-page section.book .card-reviews .media-body #review #more {
+  display: none;
+}
+section.books-page section.book .card-reviews .media-body #review #btn-more {
+  color: #AD614A;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+section.books-page section.book .card-reviews .media-body #review #btn-more:focus {
+  outline: none;
+}
+
+section#add-review .modal-title {
+  color: #AD614A;
+}
+section#add-review .modal-body button:focus {
+  outline: #C4B2A4;
+}
+section#add-review .modal-body form .form-group {
+  outline: #C4B2A4;
+}
+section#add-review .modal-body form .form-group label {
+  color: #AD614A;
+}
+section#add-review .modal-body form .form-group textarea {
+  width: 100%;
+  color: #3A342F;
+}
+section#add-review .modal-body form .form-group textarea:focus {
+  outline: #3A342F;
+}
+section#add-review .modal-body form .form-group input {
+  color: #3A342F;
+}
+section#add-review .modal-body form .form-group input:focus {
+  outline: #C4B2A4;
+  color: #3A342F;
+}
+
+section#searchTable table thead {
+  background-color: #3A342F;
+}
+section#searchTable table tr {
+  color: #3A342F;
+}
+section#searchTable table tr:hover {
+  cursor: pointer;
+}
+section#searchTable table td:hover {
+  cursor: pointer;
+}
+
+.modal-title {
+  color: #AD614A;
+}
+
+.modal-body button:focus {
+  outline: #C4B2A4;
+}
+.modal-body form .form-group {
+  outline: #C4B2A4;
+}
+.modal-body form .form-group label {
+  color: #AD614A;
+}
+.modal-body form .form-group textarea {
+  width: 100%;
+  color: #3A342F;
+}
+.modal-body form .form-group textarea:focus {
+  outline: #3A342F;
+}
+.modal-body form .form-group input {
+  color: #3A342F;
+}
+.modal-body form .form-group input:focus {
+  outline: #C4B2A4;
+  color: #3A342F;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */

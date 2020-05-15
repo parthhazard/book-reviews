@@ -1,0 +1,43 @@
+<nav class="navbar fixed-top navbar-expand-md">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="/">Reviews</a>
+      <button type="button" id="changeToggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarNav" aria-expanded="false" aria-controls="navbarNav">
+        <span id="navbar-hamburger" class="fa fa-bars"></span>
+      </button>
+
+    <div class="flex-row-reverse collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav" id="navbar-nav">
+        {% if session.logged_in %}
+          <li class="nav-item">
+            <a class="nav-link searchNav {{ 'active' if active_page == 'search' else '' }}">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ 'active' if active_page == 'dashboard' else '' }}" href="/dashboard">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+          </li>
+        {% elif active_page not in ['home', 'search'] %}
+          <li class="nav-item">
+            <a class="nav-link searchNav {{ 'active' if active_page == 'search' else '' }}">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ 'active' if active_page == 'login' else '' }}" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ 'active' if active_page == 'register' else '' }}" href="/register">Sign Up</a>
+          </li>
+        {% else %}
+          <li class="nav-item">
+            <a class="nav-link {{ 'active' if active_page == 'login' else '' }}" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ 'active' if active_page == 'register' else '' }}" href="/register">Sign Up</a>
+          </li>
+        {% endif %}
+
+      </ul>
+
+    </div>
+  </div>
+</nav>

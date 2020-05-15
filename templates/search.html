@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% set active_page = "search" %}
+
+{% block heading %}
+  Search
+{% endblock %}
+
+{% block body %}
+  <section id="searchTable">
+    <div class="container">
+      <table class="table table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if results %}
+            {% for x in results %}
+              <tr class="searchRow" data-href = "{{url_for('bookPage', isbn=x.isbn)}}"">
+                <th scope="row">{{loop.index}}</th>
+                <td>{{x.isbn}}</td>
+                <td>{{x.title}}</td>
+                <td>{{x.name}}</td>
+              </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="4" class="mx-auto">No results match the query</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+
+    </div>
+  </section>
+{% endblock %}
