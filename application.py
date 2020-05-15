@@ -20,6 +20,7 @@ def create_app():
     app = Flask(__name__)
 
     app.config['JSON_SORT_KEYS'] = False
+    goodreadsKey = 'OPzZU454Ppen5M5rnjmYVw'
 
     # Check for environment variable
     if not os.getenv("DATABASE_URL"):
