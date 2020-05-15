@@ -90,7 +90,7 @@
                             </button>
                           </div>
                           <div class="modal-body">
-                            <form class="form_style" action="{{url_for('updateReview', isbn=x.isbn, id=x.id)}}" method="POST">
+                            <form class="form_style" action="{{url_for('updateReview', id= x.id)}}" method="POST">
 
                               <div class="form-group">
                                 <div class="row">
@@ -98,8 +98,8 @@
                                     <label for="oldrating" class="col-form-loabel">Old Rating</label>
                                     <input type="number" step="0.01" min="0" max="5" name="oldrating" value={{x.ratings}} readonly><span>/5</span>
                                   </div>
-                                  <div class="col-md-4 col-sm-5">
-                                    <label for="rating" class="col-form-loabel pl-2">New Rating</label>
+                                  <div class="col-md-6 col-sm-5">
+                                    <label for="rating" class="col-form-loabel pr-1">New Rating</label>
                                     <input type="number" step="0.01" min="0" max="5" name="rating" value={{x.ratings}}><span>/5</span>
                                   </div>
                                 </div>
@@ -113,7 +113,7 @@
                               <div class="form-group">
                                 <label for="reviewText">New Review</label>
                                 <textarea name="reviewText" rows="8" cols="80">{{x.review_text}}</textarea>
-                                <span class="text-muted">Max 500 charecters.</span>
+                                <span class="text-muted">Max 500 characters.</span>
                               </div>
 
 

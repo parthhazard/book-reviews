@@ -418,7 +418,7 @@ section.profile .card .card-body .media .media-body section#review .review #btn-
 }
 
 div.alert {
-  padding: 3px 20px;
+  padding: 3px 10px;
   height: 40px;
   background-color: #AD614A;
   color: #FFFFFF;
@@ -432,7 +432,7 @@ div.alert button {
 }
 div.alert button:hover {
   color: #3A342F;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 section.books-display {
@@ -615,6 +615,9 @@ section#searchTable table td:hover {
   color: #AD614A;
 }
 
+.modal-body .modal-footer button {
+  width: fit-content !important;
+}
 .modal-body button:focus {
   outline: #C4B2A4;
 }
@@ -637,6 +640,11 @@ section#searchTable table td:hover {
 .modal-body form .form-group input:focus {
   outline: #C4B2A4;
   color: #3A342F;
+}
+
+*:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 /*# sourceMappingURL=stylesheet.css.map */

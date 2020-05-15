@@ -9,7 +9,7 @@
       <ul class="nav navbar-nav" id="navbar-nav">
         {% if session.logged_in %}
           <li class="nav-item">
-            <a class="nav-link searchNav {{ 'active' if active_page == 'search' else '' }}">Search</a>
+            <a class="nav-link searchNav {{ 'active' if active_page == 'search' else '' }}" href="#top">Search</a>
           </li>
           <li class="nav-item">
             <a class="nav-link {{ 'active' if active_page == 'dashboard' else '' }}" href="/dashboard">Profile</a>

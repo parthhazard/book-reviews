@@ -41,7 +41,7 @@
                 <div class="container-fluid">
                   {% if (session.logged_in) and (ifUserReview == True) %}
                     <!-- <button type="button" name="button" class="btn btn-style" data-toggle="modal" data-target="#modalUpdateReview"><span>Update Review</span></button> -->
-                    <button type="button" name="button" class="btn btn-style"><span>Alredy reviewed the book</span></button>
+                    <button type="button" name="button" class="btn btn-style"><span>Already reviewed the book</span></button>
                   {% elif session.logged_in %}
                     <button type="button" name="button" class="btn btn-style" data-toggle="modal" data-target="#modalAddReview"><span>Add a Review</span></button>
                   {% else %}

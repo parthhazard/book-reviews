@@ -492,7 +492,7 @@ section.profile {
 
 // alerts
 div.alert {
-  padding: 3px 20px;
+  padding: 3px 10px;
   height: 40px;
   background-color: $color1;
   color: $color6;
@@ -505,7 +505,7 @@ div.alert {
   }
   button:hover {
     color: $color5;
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
@@ -737,6 +737,11 @@ section#searchTable {
 }
 
 .modal-body {
+  .modal-footer {
+    button {
+      width: fit-content !important;
+    }
+  }
   button:focus {
     outline: $color4;
   }
@@ -763,4 +768,9 @@ section#searchTable {
 
     }
   }
+}
+
+*:focus {
+  outline: none;
+  box-shadow: none;
 }
