@@ -4,17 +4,20 @@ This application is a book review and ratings site with access upto 5000 books a
 
 File details-
 
-application.py: contains the Flask app with all the information of it's routes and interactions with the postgres DB.
-  	./books/isbn: this url will take you to the book with the given isbn.
-  	./api/isbn: this url displays the results consisting of the book’s title, author, publication date, ISBN number, review count, and 				average score in JSON schema.  
-extra_functions.py: python script to verify password constraints.
+```application.py:``` contains the Flask app with all the information of it's routes and interactions with the postgres DB.
 
-import.py: python script to import data from "books.csv" and insert into the DB.
+ 	```./books/isbn:``` this url will take you to the book with the given isbn.
 
-templates: files in this folder contains html layouts for the app.
+  	```./api/isbn:``` this url displays the results consisting of the book’s title, author, publication date, ISBN number, review count, and average score in JSON schema.
 
-templates/includes: html files in this forlder contains helpers for the layout.
+```extra_functions.py:``` python script to verify password constraints and to calculate time difference.
 
-static: folder contains CSS/SCSS and JavaScript files used in the app.
+```import.py:``` python script to import data from "books.csv" and insert into the DB.
 
-requirements.txt: contains list of all python packages used by the app.
+```templates:``` files containing html5 layout for the app.
+
+```templates/includes:``` html files containing helpers for the wtforms.
+
+```static:``` contains CSS/SCSS and JavaScript files used in the app.
+
+```requirements.txt:``` contains list of all python packages used by the app.

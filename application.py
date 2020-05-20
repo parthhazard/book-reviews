@@ -7,7 +7,7 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 from wtforms import Form, StringField, SelectField, PasswordField, validators, SelectMultipleField, DecimalField, TextAreaField
 from wtforms.validators import ValidationError
 from passlib.hash import sha256_crypt
-from extra_functions import password_val
+from extra_functions import password_val, time_diff, time_small
 from random import randint
 from wtforms import widgets
 from functools import wraps
@@ -177,8 +177,8 @@ def dashboard():
     usersQuery = db.execute("SELECT * FROM users WHERE id = :id", {"id": user_id}).fetchone()
     reviewQuery = db.execute("SELECT * FROM reviews WHERE (tags IN ('public', 'archived')) AND user_id = :id", {"id": user_id}).fetchall()
     for x in reviewQuery:
-        db.execute("UPDATE reviews SET current_time_diff = (SELECT DATEDIFF('time', :start, :end)) WHERE id= :id", {"end": str(datetime.now()), "start": x['posted_date'], "id": x['id']})
-        db.execute("UPDATE reviews SET current_time_str = (SELECT DATEDIFF('string', :start, :end)) WHERE id= :id", {"end": str(datetime.now()), "start": x['posted_date'], "id": x['id']})
+        db.execute("UPDATE reviews SET current_time_diff = :diff WHERE id= :id", {"diff": time_diff(x['posted_date']), "id": x['id']})
+        db.execute("UPDATE reviews SET current_time_str = :small WHERE id= :id", {"small": time_small(x['posted_date']), "id": x['id']})
     db.commit()
     reviewQuery = db.execute("SELECT reviews.*, books.title FROM reviews INNER JOIN books ON reviews.isbn = books.isbn WHERE reviews.user_id = :id ORDER BY posted_date DESC", {"id": user_id}).fetchall()
     return render_template('dashboard.html', users=usersQuery, reviews=reviewQuery)
